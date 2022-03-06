@@ -37,6 +37,9 @@ function showSlidesLightbox(l) {
       ""
     );
   }
+  if (slidesLightbox.length == 0) {
+    return;
+  }
   slidesLightbox[slideIndexLightbox - 1].style.display = "block";
   dotsLightbox[slideIndexLightbox - 1].className += " active";
   captionTextLightbox.innerHTML = dotsLightbox[slideIndexLightbox - 1].alt;

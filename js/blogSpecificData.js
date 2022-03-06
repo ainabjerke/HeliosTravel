@@ -2,11 +2,6 @@ const detailContainer = document.querySelector(".blog-specific-content");
 const resultsContainer = document.querySelector(".loadingPosts");
 const queryString = document.location.search;
 
-const modalContentLightboxContainer = document.querySelectorAll(
-  ".modal-content-lightbox"
-);
-
-console.log(modalContentLightboxContainer);
 const mySlidesContainer = document.querySelectorAll(".mySlides");
 // const columnLightboxContainer = document.querySelectorAll(".column-lightbox");
 
@@ -34,19 +29,47 @@ getBlogSpecificPosts();
 
 function lightboxCarousel(pictures) {
   console.log(pictures.images);
-  // for (let i = 0; i < pictures.length; i++) {
-  //   if (i <= 4) {
-    modalContentLightboxContainer.innerHTML += `<div class="mySlides">
+  const modalContentLightboxContainer = document.querySelector(
+    ".modal-content-lightbox"
+  );
 
-                                                <img
-                                                src="${pictures.images[0].src}"
-                                                                      
-                                              />
-                                          
+  console.log(modalContentLightboxContainer);
+  var myslidesContent = "";
+  var myColumns = "";
 
-                                    </div>`;
-    }
-//   }
+  // for (let i = 1; i < pictures.images.length && i < 5; i++) {
+  for (let i = 0; i < pictures.images.length && i < 4; i++) {
+    //if (i <= 4) {
+    myColumns += ` <div class="column-lightbox">
+<img
+  class="img-demo cursor"
+  src="${pictures.images[i].src}"
+  style="width: 100%"
+  onclick="currentSlideLightbox(${i + 1})"
+  alt="${pictures.images[i].alt}"
+/>
+</div>`;
+    myslidesContent += ` <div class="mySlides">
+    <div class="numbertext">${i + 1} / ${pictures.images.length}</div>
+    <img
+      src="${pictures.images[i].src}"
+      style="width: 100%"
+    />
+  </div><!--<div class="mySlides">
+
+                                    <img
+                                    src="${pictures.images[i].src}"
+                                                          
+                                  />
+                              
+
+                        </div>-->`;
+  }
+  var mySlidesDiv = document.querySelector(".mySlides-location");
+  mySlidesDiv.outerHTML = myslidesContent;
+  var columnLightboxDiv = document.querySelector(".column-lightbox-location");
+  columnLightboxDiv.outerHTML = myColumns;
+}
 // }
 
 // function lightboxCarousel(pictures) {
