@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Contact Helios Travel by e-mail" />
+    <meta name="keywords" content="Helios Travel, contact, travel" />
+    <meta name="author" content="Helios Travel" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Page</title>
+    <link
+      rel="icon"
+      type="to%20wordpress/favicon_helios_travel.png"
+      href="to%20wordpress/favicon_helios_travel.png"
+    />
+    <link href="css/styles.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/c084a66896.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Hotjar Tracking Code for https://clever-wilson-cdb950.netlify.app/ -->
+    <script>
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 2844340, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+    </script>
+  </head>
+  <body>
+    <!--navigation menu -->
+    <header>
+      <div class="logo">
+        <a href="index.html">
+          <img
+            src="to%20wordpress/helios_travel_logo_transparent.png"
+            alt="Helios travel logo"
+          />
+        </a>
+      </div>
+      <nav class="topnav" id="myTopnav">
+        <a href="javascript:void(0);" class="icon" onclick="topNavFunction()">
+          &#9776;
+        </a>
+        <ul>
+          <li class="style-nav">
+            <a href="index.html">Home</a>
+          </li>
+          <li class="style-nav"><a href="blog-page.html">Blog Page</a></li>
+          <li class="style-nav"><a href="about.html">About</a></li>
+          <li class="style-nav">
+            <a href="contact.html" class="top-nav-active">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!--Contact form-->
+      <div class="contact-header-text">
+        <h1>Contact us</h1>
+      </div>
+      <section class="flex-container">
+        <div class="flex-item-left">
+          <img
+            src="to%20wordpress/contact%20form.jpg"
+            alt="contact form image"
+          />
+        </div>
+        <div class="flex-item-right">
+          <div class="cf-sub-header">
+            <h2>E-mail us</h2>
+          </div>
+          <div id="message"></div>
+          <form id="contactForm">
+            <div class="container-contact-form">
+              <div>
+                <label>
+                  <i class="fas fa-user-alt"></i>
+                  <input
+                    name="fullName"
+                    id="fullName"
+                    placeholder="Full name"
+                  />
+                </label>
+                <div class="form_error" id="fullNameError">
+                  Please enter your full name with a minimum of 5 characters
+                </div>
+              </div>
+              <div>
+                <label>
+                  <i class="fas fa-envelope"></i>
+                  <input
+                    name="email"
+                    id="email"
+                    placeholder="aina@example.com"
+                  />
+                </label>
+                <div class="form_error" id="emailError">
+                  Please enter a valid email
+                </div>
+              </div>
+              <div>
+                <label>
+                  <i class="far fa-closed-captioning"></i>
+                  <input
+                    name="subject"
+                    id="subject"
+                    placeholder="Fill in a subject"
+                  />
+                </label>
+                <div class="form_error" id="subjectError">
+                  Please enter the subject field with a minimum of 15 characters
+                </div>
+              </div>
+              <div>
+                <label for="textArea">
+                  <i class="far fa-edit"></i>
+                  <textarea
+                    id="textArea"
+                    name="textArea"
+                    placeholder="Your message.."
+                  ></textarea>
+                </label>
+                <div class="form_error" id="textAreaError">
+                  Please fill in your message with a minimum of 25 characters
+                </div>
+              </div>
+            </div>
+            <button class="submit_button">Submit</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <!--footer-->
+    <footer class="footer">
+      <!--  Company logo  -->
+      <section class="container-footer-info">
+        <div class="left-footer-info left-footer-logo">
+          <a href="index.html">
+            <img
+              src="to%20wordpress/helios%20travel%20logo.png"
+              alt="Helios Travel logo"
+            />
+          </a>
+        </div>
+        <!-- Footer company info -->
+        <div class="right-footer-container-info">
+          <h2>Helios Travel Blog</h2>
+          <div class="right-footer-nav right-footer-nav-style">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="blog-page.html">Blog Page</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <!-- Follow us on social media -->
+          <div class="right-footer-social-media">
+            <h2>Follow us on social media</h2>
+            <a href="#"><i class="fab fa-facebook-square"></i></a>
+            <a href="#"><i class="fab fa-instagram-square"></i></a>
+            <a href="#"><i class="fab fa-twitter-square"></i></a>
+            <a href="#"><i class="fab fa-youtube-square"></i></a>
+          </div>
+          <!-- Copyright information -->
+          <div class="right-copyright-info">
+            <h3>
+              &copy; 2022 Helios Travel Blog | Designed and coded by Aina Bjerke
+              | Images taken and edited by Aina Bjerke
+            </h3>
+          </div>
+        </div>
+      </section>
+    </footer>
+    <script src="js/hamburgerMenu.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/contact.js"></script>
+  </body>
+</html>
