@@ -67,6 +67,105 @@
       </nav>
     </header>
     <main>
+      <!--New Modal-->
+      <!-- <h2 style="text-align: center">Lightbox</h2>
+
+      <div class="flex-container-lightbox">
+        <div class="flex-item-left-lightbox">
+          <img
+            src="to wordpress/bali cliffs with seaview and flowers.jpg"
+            style="width: 50%"
+            onclick="openModalLightbox();currentSlideLightbox(1)"
+            class="hover-shadow cursor"
+          />
+          <h2>Lison has it all</h2>
+          <p>lorem ipsum blbla</p>
+        </div>
+      </div> -->
+
+      <div id="lightBoxModal" class="modal-lightbox">
+        <span class="close-lightbox cursor" onclick="closeModalLightbox()">
+          &times;
+        </span>
+        <div class="modal-content-lightbox">
+          <div class="mySlides">
+            <div class="numbertext">1 / 4</div>
+            <img
+              src="to wordpress/bali cliffs with seaview and flowers.jpg"
+              style="width: 100%"
+            />
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">2 / 4</div>
+            <img
+              src="to wordpress/bali nusa dua beach.jpg"
+              style="width: 100%"
+            />
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">3 / 4</div>
+            <img
+              src="to wordpress/bali temple at lake.jpg"
+              style="width: 100%"
+            />
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">4 / 4</div>
+            <img
+              src="to wordpress/padma ubud hotel pool.jpg"
+              style="width: 100%"
+            />
+          </div>
+
+          <a class="prev-lightbox" onclick="plusSlidesLightbox(-1)">&#10094;</a>
+          <a class="next-lightbox" onclick="plusSlidesLightbox(1)">&#10095;</a>
+
+          <div class="caption-container">
+            <p id="caption"></p>
+          </div>
+
+          <div class="column-lightbox">
+            <img
+              class="img-demo cursor"
+              src="to wordpress/bali cliffs with seaview and flowers.jpg"
+              style="width: 100%"
+              onclick="currentSlideLightbox(1)"
+              alt="Nature and sunrise"
+            />
+          </div>
+          <div class="column-lightbox">
+            <img
+              class="img-demo cursor"
+              src="to wordpress/bali nusa dua beach.jpg"
+              style="width: 100%"
+              onclick="currentSlideLightbox(2)"
+              alt="Snow"
+            />
+          </div>
+          <div class="column-lightbox">
+            <img
+              class="img-demo cursor"
+              src="to wordpress/bali temple at lake.jpg"
+              style="width: 100%"
+              onclick="currentSlideLightbox(3)"
+              alt="Mountains and fjords"
+            />
+          </div>
+          <div class="column-lightbox">
+            <img
+              class="img-demo cursor"
+              src="to wordpress/padma ubud hotel pool.jpg"
+              style="width: 100%"
+              onclick="currentSlideLightbox(4)"
+              alt="Northern Lights"
+            />
+          </div>
+        </div>
+      </div>
+
       <!--Modal-->
       <!-- <section>
         <div
@@ -80,119 +179,6 @@
           </div>
         </div>
       </section> -->
-      <div class="row">
-        <div class="column">
-          <img
-            src="to wordpress/arab street in singapore.jpg"
-            style="width: 100%"
-            onclick="openModal();currentSlide(1)"
-            class="hover-shadow cursor"
-          />
-        </div>
-        <!-- <div class="column">
-          <img
-            src="to wordpress/bali nusa dua beach.jpg"
-            style="width: 100%"
-            onclick="openModal();currentSlide(2)"
-            class="hover-shadow cursor"
-          />
-        </div>
-        <div class="column">
-          <img
-            src="to wordpress/bali nusa dua beach.jpg"
-            style="width: 100%"
-            onclick="openModal();currentSlide(3)"
-            class="hover-shadow cursor"
-          />
-        </div>
-        <div class="column">
-          <img
-            src="to wordpress/bangkok park with temples.jpg"
-            style="width: 100%"
-            onclick="openModal();currentSlide(4)"
-            class="hover-shadow cursor"
-          />
-        </div>
-      </div> -->
-
-      <div id="myModal" class="modal">
-        <span class="close cursor" onclick="closeModal()">&times;</span>
-        <div class="modal-content">
-          <div class="mySlides">
-            <div class="numbertext">1 / 4</div>
-            <img
-              src="to wordpress/batu caves kuala lumpur malaysia.jpg"
-              style="width: 100%"
-            />
-          </div>
-
-          <div class="mySlides">
-            <div class="numbertext">2 / 4</div>
-            <img src="to wordpress/lagos background.jpg" style="width: 100%" />
-          </div>
-
-          <div class="mySlides">
-            <div class="numbertext">3 / 4</div>
-            <img
-              src="to wordpress/horse statue in fountain lisbon.jpg"
-              style="width: 100%"
-            />
-          </div>
-
-          <div class="mySlides">
-            <div class="numbertext">4 / 4</div>
-            <img
-              src="to wordpress/park in kuala lumpur malaysia.jpg"
-              style="width: 100%"
-            />
-          </div>
-
-          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-          <div class="caption-container">
-            <p id="caption"></p>
-          </div>
-
-          <div class="column">
-            <img
-              class="demo cursor"
-              src="to wordpress/bali nusa dua beach.jpg"
-              style="width: 100%"
-              onclick="currentSlide(1)"
-              alt="Nature and sunrise"
-            />
-          </div>
-          <div class="column">
-            <img
-              class="demo cursor"
-              src="to wordpress/lisboa city restaurant.jpg"
-              style="width: 100%"
-              onclick="currentSlide(2)"
-              alt="Snow"
-            />
-          </div>
-          <div class="column">
-            <img
-              class="demo cursor"
-              src="to wordpress/boat trip dubai.jpg"
-              style="width: 100%"
-              onclick="currentSlide(3)"
-              alt="Mountains and fjords"
-            />
-          </div>
-          <div class="column">
-            <img
-              class="demo cursor"
-              src="to wordpress/padma ubud hotel pool.jpg"
-              style="width: 100%"
-              onclick="currentSlide(4)"
-              alt="Northern Lights"
-            />
-          </div>
-        </div>
-      </div>
-
       <!--error message-->
       <section>
         <div class="loadingPosts">
@@ -249,10 +235,11 @@
     </footer>
     <!--js files-->
     <script src="js/components/errorMessage.js"></script>
-    <script src="js/contact.js"></script>
+    <!-- <script src="js/contact.js"></script> -->
     <script src="js/hamburgerMenu.js"></script>
-    <script src="js/modal.js"></script>
-    <script src="js/validation.js"></script>
+    <script src="js/lightboxModal.js"></script>
+    <!-- <script src="js/modal.js"></script> -->
+    <!-- <script src="js/validation.js"></script> -->
     <script src="js/blogSpecificData.js"></script>
   </body>
 </html>

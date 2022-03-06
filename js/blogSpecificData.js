@@ -2,6 +2,14 @@ const detailContainer = document.querySelector(".blog-specific-content");
 const resultsContainer = document.querySelector(".loadingPosts");
 const queryString = document.location.search;
 
+const modalContentLightboxContainer = document.querySelectorAll(
+  ".modal-content-lightbox"
+);
+
+console.log(modalContentLightboxContainer);
+const mySlidesContainer = document.querySelectorAll(".mySlides");
+// const columnLightboxContainer = document.querySelectorAll(".column-lightbox");
+
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
 const url =
@@ -15,6 +23,7 @@ async function getBlogSpecificPosts() {
     const getResults = await response.json();
 
     displayBlogSpecificContentHTML(getResults);
+    lightboxCarousel(getResults);
   } catch (error) {
     resultsContainer.innerHTML = errorMessage(
       "Unable to get the description based on API call."
@@ -23,14 +32,70 @@ async function getBlogSpecificPosts() {
 }
 getBlogSpecificPosts();
 
+function lightboxCarousel(pictures) {
+  console.log(pictures.images);
+  // for (let i = 0; i < pictures.length; i++) {
+  //   if (i <= 4) {
+    modalContentLightboxContainer.innerHTML += `<div class="mySlides">
+
+                                                <img
+                                                src="${pictures.images[0].src}"
+                                                                      
+                                              />
+                                          
+
+                                    </div>`;
+    }
+//   }
+// }
+
+// function lightboxCarousel(pictures) {
+//   console.log(pictures.images);
+//   for (let i = 0; i < pictures.length; i++) {
+//     if (i <= 4) {
+//       modalContentLightboxContainer.innerHTML += `<div class="mySlides">
+
+//                                           <img src = "${pictures.images.src}" alt="${pictures.images.alt}">
+
+//                                     </div>`;
+//     }
+//   }
+// }
+
+// function lightboxCarousel(pictures) {
+//   for (let i = 0; i < pictures.length; i++) {
+//     if (i <= 4) {
+//       modalContentLightbox.innerHTML += `<div class="mySlides">
+
+//                                           <img src = "${pictures.images[i].src}" alt="${pictures.images[i].alt}">
+//                                           <p>${pictures.name}</p>
+
+//                                     </div>`;
+//     }
+//   }
+// }
+
+// function lightboxCarousel(pictures) {
+//   for (let i = 0; i < pictures.length; i++) {
+//     if (i <= 4) {
+//       modalContentLightbox.innerHTML += `<div class="mySlides">
+
+//                                           <img src = "${pictures.images[i].src}" alt="${pictures.images[i].alt}">
+//                                           <p>${pictures.name}</p>
+
+//                                     </div>`;
+//     }
+//   }
+// }
+
 // function to display selected data from API
 function displayBlogSpecificContentHTML(posts) {
-  console.log(posts.images);
+  // console.log(posts.images);
   detailContainer.innerHTML += `<div class="blog-details-api">
                                   <img
                                     src="${posts.images[0].src}"
-                                    alt="${posts.images[0].alt}"                            
-                                    onclick="onClick(this)"
+                                    alt="${posts.images[0].alt}"                         
+                                    onclick="openModalLightbox();currentSlideLightbox(1)"
                                     class="modal-hover-opacity"
                                   />
                                   <div>

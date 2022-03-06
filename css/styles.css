@@ -917,7 +917,7 @@ hr {
 
 /*** blog specific page modal styles****/
 
-/* .modal {
+.modal {
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.8);
   display: none;
@@ -1012,7 +1012,7 @@ hr {
     margin-top: 213px;
     width: 313px;
   }
-} */
+}
 
 /************************* blog page css **************************/
 
@@ -1234,10 +1234,7 @@ textarea {
   }
 }
 
-/***************** new modal *************/
-.row > .column {
-  padding: 0 8px;
-}
+/****************************** new updated modal *****************************/
 
 .row:after {
   content: "";
@@ -1245,13 +1242,13 @@ textarea {
   clear: both;
 }
 
-.column {
+.column-lightbox {
   float: left;
   width: 25%;
 }
 
 /* The Modal (background) */
-.modal {
+.modal-lightbox {
   display: none;
   position: fixed;
   z-index: 1;
@@ -1265,7 +1262,7 @@ textarea {
 }
 
 /* Modal Content */
-.modal-content {
+.modal-content-lightbox {
   position: relative;
   background-color: #fefefe;
   margin: auto;
@@ -1275,7 +1272,7 @@ textarea {
 }
 
 /* The Close Button */
-.close {
+.close-lightbox {
   color: white;
   position: absolute;
   top: 10px;
@@ -1284,8 +1281,8 @@ textarea {
   font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+.close-lightbox:hover,
+.close-lightbox:focus {
   color: #999;
   text-decoration: none;
   cursor: pointer;
@@ -1300,8 +1297,8 @@ textarea {
 }
 
 /* Next & previous buttons */
-.prev,
-.next {
+.prev-lightbox,
+.next-lightbox {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -1318,14 +1315,14 @@ textarea {
 }
 
 /* Position the "next button" to the right */
-.next {
+.next-lightbox {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
+.prev-lightbox:hover,
+.next-lightbox:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
@@ -1349,12 +1346,12 @@ img {
   color: white;
 }
 
-.demo {
+.img-demo {
   opacity: 0.6;
 }
 
 .active,
-.demo:hover {
+.img-demo:hover {
   opacity: 1;
 }
 
@@ -1364,4 +1361,24 @@ img.hover-shadow {
 
 .hover-shadow:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.flex-container-lightbox {
+  display: flex;
+  flex-direction: row;
+  font-size: 30px;
+  text-align: center;
+}
+
+.flex-item-left-lightbox {
+  background-color: #f1f1f1;
+  padding: 10px;
+  flex: 50%;
+}
+
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 800px) {
+  .flex-container-lightbox {
+    flex-direction: column;
+  }
 }
