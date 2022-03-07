@@ -40,76 +40,31 @@ function lightboxCarousel(pictures) {
   // for (let i = 1; i < pictures.images.length && i < 5; i++) {
   for (let i = 0; i < pictures.images.length && i < 4; i++) {
     //if (i <= 4) {
-    myColumns += ` <div class="column-lightbox">
-<img
-  class="img-demo cursor"
-  src="${pictures.images[i].src}"
-  style="width: 100%"
-  onclick="currentSlideLightbox(${i + 1})"
-  alt="${pictures.images[i].alt}"
-/>
-</div>`;
-    myslidesContent += ` <div class="mySlides">
-    <div class="numbertext">${i + 1} / ${pictures.images.length}</div>
-    <img
-      src="${pictures.images[i].src}"
-      style="width: 100%"
-    />
-  </div><!--<div class="mySlides">
-
-                                    <img
+    myColumns +=            `<div class="column-lightbox">
+                              <img
+                                class="img-demo cursor"
+                                src="${pictures.images[i].src}"
+                                style="width: 100%"
+                                onclick="currentSlideLightbox(${i + 1})"
+                                alt="${pictures.images[i].alt}"
+                              />
+                              </div>`;
+  
+  myslidesContent +=          ` <div class="mySlides">
+                                  <div class="numbertext">${i + 1} / ${pictures.images.length}</div>
+                                  <img
                                     src="${pictures.images[i].src}"
-                                                          
+                                    style="width: 100%"
                                   />
-                              
-
-                        </div>-->`;
+                                </div><!--<div class="mySlides">
+                              <img src="${pictures.images[i].src}" />
+                                    </div>-->`;
   }
   var mySlidesDiv = document.querySelector(".mySlides-location");
   mySlidesDiv.outerHTML = myslidesContent;
   var columnLightboxDiv = document.querySelector(".column-lightbox-location");
   columnLightboxDiv.outerHTML = myColumns;
 }
-// }
-
-// function lightboxCarousel(pictures) {
-//   console.log(pictures.images);
-//   for (let i = 0; i < pictures.length; i++) {
-//     if (i <= 4) {
-//       modalContentLightboxContainer.innerHTML += `<div class="mySlides">
-
-//                                           <img src = "${pictures.images.src}" alt="${pictures.images.alt}">
-
-//                                     </div>`;
-//     }
-//   }
-// }
-
-// function lightboxCarousel(pictures) {
-//   for (let i = 0; i < pictures.length; i++) {
-//     if (i <= 4) {
-//       modalContentLightbox.innerHTML += `<div class="mySlides">
-
-//                                           <img src = "${pictures.images[i].src}" alt="${pictures.images[i].alt}">
-//                                           <p>${pictures.name}</p>
-
-//                                     </div>`;
-//     }
-//   }
-// }
-
-// function lightboxCarousel(pictures) {
-//   for (let i = 0; i < pictures.length; i++) {
-//     if (i <= 4) {
-//       modalContentLightbox.innerHTML += `<div class="mySlides">
-
-//                                           <img src = "${pictures.images[i].src}" alt="${pictures.images[i].alt}">
-//                                           <p>${pictures.name}</p>
-
-//                                     </div>`;
-//     }
-//   }
-// }
 
 // function to display selected data from API
 function displayBlogSpecificContentHTML(posts) {
