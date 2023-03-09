@@ -15,7 +15,7 @@ Project exam 1
 
 ## Description
 
-This project was my project exam through my first year of studies. It is an travel blog site for both a front-end and an admin page built with Strapi and deployed with Wordpress hosting the image, title, text and icons.
+This project was my project exam through my first year of studies. It is a travel blog site for both a front-end and an admin page built with Wordpress hosting the images, titles, texts and icons.
 
 Some features:
 - Public API powered by Wordpress Rest API 
@@ -26,10 +26,10 @@ Some features:
 - View more/less button to view more blog posts
 - Using query paramter to fetch specific data users has clicked on
 - Modal users can click on to view a bigger images
-- Post data from contact form to Wordpress to the details ios saved
-- Allows user to submit comment on blog posts and post this data to Wordpress
-- JavaScript is used for validation on the contact form, showing an error message if the value in the textboxes does not meet the requrements
-- Ligtbox modal image gallery, clicking on the image in the blog specific page opent the lightbox
+- Post data from contact form to WordPress so the details is saved
+- Allows user to submit comments on blog posts and post this data to WordPress
+- JavaScript is used for validation on the contact form, showing an error message if the value in the textboxes does not meet the requirements
+- Lightbox modal images gallery, clicking on the images in blog specific page opens the lightbox
 
 
 ## Built With
